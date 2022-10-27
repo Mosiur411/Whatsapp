@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { } from 'react'
 
-export const Friend = () => {
-    const [friend, setFriend] = useState([])
-    useEffect(() => {
-        fetch('ChatUser.json')
-            .then((response) => response.json())
-            .then((data) => {
-                if (data) {
-                    setFriend(data)
-                }
-            });
-    }, [])
+export const Friend = ({ friend, setClickChat }) => {
     return (
         <div className='w-full overflow-y-auto max-h-screen '>
             {
-                friend.map(info => <div key={info?.id} className='w-full  flex  gap-4  item-center  cursor-pointer  hover:bg-[#F0F2F5] px-4 mb-3 '>
+                friend.map((info, index) => <div onClick={() => setClickChat(index)} key={info?.id} className='w-full  flex  gap-4  item-center  cursor-pointer  hover:bg-[#F0F2F5] px-4 mb-3 '>
                     <img className='w-14 rounded-full' src={info?.img} />
                     <div className='w-full flex justify-between items-center border-b '>
                         <div>
@@ -25,8 +15,6 @@ export const Friend = () => {
                     </div>
                 </div>)
             }
-
-
 
         </div>
     )

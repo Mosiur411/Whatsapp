@@ -2,5 +2,5 @@
 npx create-react-app tlegram
 profileLink : https://ibb.co/xFTcyLw
 
-bg-color input bg: #F0F2F5 
+bg-color input sergh bg: #F0F2F5 
 bg-user hover color : #F5F6F6

@@ -3,7 +3,7 @@ import { Friend } from './Friend'
 import { FriendSearch } from './FriendSearch'
 import { UserProfileHeader } from './UserProfileHeader'
 
-export const ActiveUser = () => {
+export const ActiveUser = ({friend,setClickChat}) => {
   return (
     <div>
       <div className='sticky top-0'>
@@ -11,7 +11,7 @@ export const ActiveUser = () => {
         <FriendSearch />
       </div>
       <hr />
-      <Friend />
+      <Friend friend={friend} setClickChat={setClickChat}/>
     </div>
   )
 }  

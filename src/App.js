@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import { Chat } from "./Components/Chat/Chat";
-
 function App() {
   return (
     <div>
